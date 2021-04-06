@@ -1,0 +1,53 @@
+.searchBarContainer {
+	position: relative;
+	display: inline-block;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	margin: 1rem ;
+}
+#searchBarInput {
+	display: block;
+	box-sizing: border-box;
+
+	width: 100%;
+	padding: 0.5rem;
+	border: 1px solid #000;
+	border-radius: 1rem;
+	margin: 0 auto;
+}
+
+#searchButton {
+	display: inline-block;
+	width: max-content;
+}
+#dropDownMenu {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	box-sizing: border-box;
+	
+	text-align: left;
+	overflow: hidden;
+
+	background-color: #FFF;
+	padding: 0.5rem 0;
+	border: 1px solid #000;
+	border-radius: 1rem;
+}
+#recentSearchesList {
+	padding: 0;
+}
+#recentSearchesList li {
+	padding: 0.2rem 0.5rem;
+	cursor: default;
+}
+#forgetSearchesButton {
+	display: inline-block;
+	font-size: 1rem;
+	background-color: unset;
+	border: 0;
+}
+#forgetSearchesButton:hover {
+	text-decoration: underline;
+	
+}

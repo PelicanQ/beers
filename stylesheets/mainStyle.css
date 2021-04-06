@@ -1,0 +1,111 @@
+html {
+	font-family: Tahoma, sans-serif;
+	font-size: 0.9em;
+}
+body {
+	text-align: center;
+	background-color: #FFF; 
+}
+button {
+	font: inherit;
+	background-color: #FFF;
+	padding: 0.3rem;
+	border: 1px solid #000;
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
+ul {
+	margin: 0;
+	list-style-type: none;
+}
+li:hover {
+	background-color: #EEE;
+}
+input:focus {
+	outline: 0;
+}
+label {
+	cursor: pointer;
+}
+
+#filterOptions {
+	display: flex;
+	justify-content: space-around;
+	box-sizing: border-box;
+	width: 70%;
+
+	padding-right: 5rem;
+	padding-left: 5rem;
+	margin: 1rem auto;
+	background-color: #DDD;
+	border-radius: 1rem;
+	overflow: hidden;
+
+	transition: height 0.3s, padding 0.3s;
+}
+#filterOptions > div {
+	flex-basis: 10%;
+	white-space: nowrap;
+}
+.noHeight {
+	height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.fullHeight {
+	height: 6rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+.filterInput {
+	box-sizing: border-box;
+	padding: 0.2rem 0.4rem;
+	border: 1px solid #000;
+	border-radius: 1rem;
+	margin: 0.2rem;
+}
+#applyFilterBtn {
+	vertical-align: middle;
+}
+#searchResults {
+	box-sizing: border-box;
+	width: 70%;
+
+	margin: 1rem auto;
+	padding: 1rem 2rem;
+	background-color: #EEE;
+	border-radius: 1rem;
+}
+.spreadBar {
+	display: flex; 
+	justify-content: space-between; 
+	align-items: center;
+	margin: 0.8rem 0; 
+	padding: 0.8rem 0; 
+}
+.navButtons {
+	text-align: right;
+}
+.navButtons button {
+	padding: 0.1rem 0.3rem;
+	margin: 0;
+}
+
+#itemTemplate {
+	display: none;
+}
+.showing {
+	display: inline-block;
+}
+.hidden {
+	display: none;
+}
+.invisible {
+	visibility: hidden;
+}
+.rightAlign {
+	text-align: right;	
+}
+.leftAlign {
+	text-align: left;
+}

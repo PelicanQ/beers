@@ -1,0 +1,83 @@
+.itemMainContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	
+	box-sizing: border-box;
+	/*height: 170px;*/
+	
+	flex-basis: 45%;
+	margin: 1rem 0;
+	border-radius: 1rem;
+	box-shadow: 0 0 3px 0px #000;
+	overflow: hidden;
+	background-color: #FFF;
+
+	
+}
+.textContainer {
+	flex-grow: 1;
+	align-self: stretch;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: left;
+	align-items: stretch;
+	padding-left: 1rem; 
+	margin: 0 1rem 0 0.4rem;
+	border-left: 1px solid #AAA;
+}
+.itemName, .itemABV {
+	font-size: 1.20rem;
+}
+.itemTitle {
+	align-self: start;
+	display: block;
+	width: 100%;
+	
+	white-space: pre-wrap;
+	text-overflow: hidden;
+}
+.itemTitle .itemTagLine {
+	font-style: italic; 
+}
+.description {
+	height: 45%;
+	margin: 0 0 0;
+	overflow: hidden;
+}
+.imageContainer {
+	position: relative;
+	flex: 0 0 140px;
+	height: 140px;
+	align-self: flex-start;
+
+	text-align: center;
+	padding: 0.2rem;
+	margin: 0;
+}
+.beerImage {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 120px;
+	width: auto;
+}
+.shrinkable {
+	transition: height 0.6s;
+	overflow: hidden;
+}
+.shrinkable.shrunk  {
+	height: 0;
+}
+.shrinkable.extended {
+	height: 15rem;
+}
+.dropTextBtn {
+	display: block;
+	margin: auto auto 0;
+	transition: transform 0.3s;
+}

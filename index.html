@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Beer!</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/mainStyle.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/listedItemStyle.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/searchBarStyle.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/topBarStyle.css">
+	<script data-main="initialize.js" src="requireJS/require.js"></script>
+</head>
+
+<body>
+	<div class="topBar">
+		<span class="pageTitle">
+			<h1>Beers</h1>
+			<img width="55" src="images/beer2.png">
+			<input id="dropFilterBtn" type="image" src="images/arrow.png" width="20" height="20">
+			<label for="dropFilterBtn">Filter</label>
+		</span>
+
+		<div class="searchBarContainer">
+			<input id="searchBarInput" type="text" placeholder="Search...">
+			<div id="dropDownMenu" class="hidden">
+				<ul id="recentSearchesList"></ul>
+				<button id="forgetSearchesButton">Forget History</button>
+			</div>
+		</div>
+		<button id="searchButton">Search</button>
+	</div>
+
+
+	<div id="filterOptions" class="noHeight">
+		<div class="rightAlign">
+			<label for="maltFilterInput">Malt</label>
+			<input id="maltFilterInput" class="filterInput" type="text" >
+			<br>
+			<label for="hopsFilterInput">Hops</label>
+			<input id="hopsFilterInput" class="filterInput" type="text">
+		</div>
+		<div class="rightAlign">
+			<label for="foodFilterInput">Match with food</label>
+			<input id="foodFilterInput" class="filterInput" type="text">
+			<br>
+			<label for="yeastFilterInput">Yeast type</label>
+			<input id="yeastFilterInput" class="filterInput" type="text">
+		</div>
+		<div class="leftAlign">
+			<label for="perPageSelect">Items per Page</label>
+			<select id="perPageSelect" class="filterInput">
+				<option value="5">5</option>
+				<option value="10">10</option>
+				<option value="25" selected>25</option>
+				<option value="50">50</option>
+			</select>
+		</div>
+		<div>
+			<button id="applyFilterBtn" style="margin-bottom: 0.2rem;">Apply</button><br>
+			<button id="clearFilterBtn">Clear</button>
+		</div>
+	</div>
+
+	<div id="searchResults">
+		<div class="spreadBar" style="border-bottom: 1px solid #000;">
+			<span id="currentSearchTerm" class="invisible" style="text-align: left;" >Showing results for: <span></span></span>
+			<div class="navButtons">
+				<button class="navigateFirst"><<</button>
+				<button class="navigatePrev"><</button>
+				<span>Page <span class="currentPage">-</span></span>
+				<button class="navigateNext">></button>
+			</div>
+		</div>
+
+		<div id="beer"></div>
+
+		<div class="spreadBar" style="border-top: 1px solid #000;">
+			<div id="noItemsFound" class="invisible">No items found</div>
+			<div class="navButtons">
+				<button class="navigateFirst"><<</button>
+				<button class="navigatePrev"><</button>
+				<span>Page <span class="currentPage">-</span></span>
+				<button class="navigateNext">></button>
+			</div>
+		</div>
+	</div>
+
+	
+	<div id="itemTemplate" class="itemMainContainer">
+		<div class="imageContainer">
+			<img class="beerImage" src="">
+		</div>
+		<div class="textContainer">
+			<p class="itemTitle"><span class="itemName">Name</span> <span class="itemTagLine">Tag Line</span></p>
+			<p class="description">Description Dition Description Description Description Description </p>
+			<div class="shrinkable shrunk">
+				<p><strong>Goes with:</strong> <span class="itemFoods">Burger</span></p>
+				<p><strong>Hops:</strong> <span class="itemHops">HipHop</span></p>
+				<p><strong>Malt:</strong> <span class="itemMalt">Malt</span></p>
+				<p><strong>Made with yeast:</strong> <span class="itemYeast">Baking yeast</span></p>
+			</div>
+			<input class="dropTextBtn rotatedUp" type="image" src="images/arrow.png" width="20" height="20">
+		</div>
+	</div>
+
+</body>
+</html>
