@@ -45,27 +45,21 @@ define([], () => {
 		const requestUrl = new URL("https://api.punkapi.com/v2/beers");
 
 		//Could make variable names same as API parameters. That feels vulnerable to change though
-		if(searchTerm){
-			requestUrl.searchParams.set("beer_name", searchTerm.replace(" ", "_"));
-		}
-		if(page){
-			requestUrl.searchParams.set("page", page);
-		}
-		if(perPage){
-			requestUrl.searchParams.set("per_page", perPage);
-		}
-		if(food){
-			requestUrl.searchParams.set("food", food.replace(" ", "_"));
-		}
-		if(yeast){
-			requestUrl.searchParams.set("yeast", yeast.replace(" ", "_"));
-		}
-		if(malt){
-			requestUrl.searchParams.set("malt", malt.replace(" ", "_"));
-		}
-		if(hops){
-			requestUrl.searchParams.set("hops", hops.replace(" ", "_"));
-		}
+		
+		searchTerm && requestUrl.searchParams.set("beer_name", searchTerm.replace(" ", "_"));
+
+		page && requestUrl.searchParams.set("page", page);
+
+		perPage && requestUrl.searchParams.set("per_page", perPage);
+
+		food && requestUrl.searchParams.set("food", food.replace(" ", "_"));
+
+		yeast && requestUrl.searchParams.set("yeast", yeast.replace(" ", "_"));
+
+		malt && requestUrl.searchParams.set("malt", malt.replace(" ", "_"));
+
+		hops && requestUrl.searchParams.set("hops", hops.replace(" ", "_"));
+		
 
 		//Return promise that resolves with beers array
 		return fetch(requestUrl)
